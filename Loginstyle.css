@@ -12,6 +12,7 @@
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #00b4d8, #0077b6);
+  
   }
   
   /* Login Container */
@@ -35,9 +36,9 @@
     padding: 20px;
   }
   
-  .image-section img {
-    width: 100%;
-    height: auto;
+  .image-section .image {
+    width: 180%;
+    height: 90%;
     border-radius: 10px;
   }
   
