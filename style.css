@@ -1,0 +1,93 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+  }
+  
+  /* Login Container */
+  .login-container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Left Image Section */
+  .image-section {
+    flex: 1;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Right Form Section */
+  .form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+  }
+  
+  .form-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #023e8a;
+  }
+  
+  .form-section p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-section input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  
+  .form-section button {
+    background: #0096c7;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .form-section button:hover {
+    background: #0077b6;
+  }
+  
