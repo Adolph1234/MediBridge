@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+<meta charset="UTF8"
+<meta name ="viewport" content="width-device-width, initial-scale=1.0">
+<title>Emergence Request</title>
+<style>
+   body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; padding: 20px; }
+    h1 { text-align: center; color: #333; }
+    form { max-width: 600px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 15px; padding: 10px 15px; background: #007bff; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #0056b3; }  
+</style>
+</head>
+<body>
+    <h1>Emergency Request Form</h1>
+  <form>
+    <label for="requester">Requester (Hospital / Ambulance):</label>
+    <select id="requester" name="requester">
+      <option value="hospital">Hospital ER</option>
+      <option value="ambulance">Ambulance</option>
+    </select>
+
+    <label for="patient">Patient Name (optional):</label>
+    <input type="text" id="patient" name="patient" placeholder="Enter patient name">
+
+    <label for="age">Patient Age:</label>
+    <input type="number" id="age" name="age" min="0">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <label for="emergency">Type of Emergency:</label>
+    <select id="emergency" name="emergency">
+      <option value="accident">Accident</option>
+      <option value="cardiac">Cardiac Arrest</option>
+      <option value="trauma">Trauma</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" placeholder="Enter location or GPS">
+
+    <label for="priority">Priority Level:</label>
+    <select id="priority" name="priority">
+      <option value="critical">Critical</option>
+      <option value="high">High</option>
+      <option value="normal">Normal</option>
+    </select>
+
+    <label for="notes">Additional Notes:</label>
+    <textarea id="notes" name="notes" placeholder="Enter any details..."></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>  
+</body>
+</html>
