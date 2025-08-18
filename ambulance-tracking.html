@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambulance Tracking</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #007bff; color: white; padding: 15px; text-align: center; }
+    #map { height: 90vh; width: 100%; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ambulance Tracking</h1>
+  </header>
+  <div id="map"></div>
+
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      // Default location (for example, Dar es Salaam)
+      var location = { lat: -6.7924, lng: 39.2083 };
+
+      // Map centered at location
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: location,
+      });
+
+      // Marker for ambulance
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "Ambulance Location",
+        icon: {
+          url: "https://img.icons8.com/color/48/ambulance.png",
+          scaledSize: new google.maps.Size(40, 40)
+        }
+      });
+
+      // Example: simulate ambulance movement
+      setInterval(() => {
+        location.lat += (Math.random() - 0.5) * 0.001;
+        location.lng += (Math.random() - 0.5) * 0.001;
+        marker.setPosition(location);
+        map.setCenter(location);
+      }, 3000);
+    }
+  </script>
+
+  <!-- Load Google Maps API -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
