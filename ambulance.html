@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediBridge - Ambulance Tracking</title>
-  <link rel="stylesheet" href="dashboard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBridge - Ambulance Tracking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            background-color: #1a3e8c;
+            color: white;
+            height: 100vh;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #1565c0;
+        }
+
+        /* Main content */
+        .main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1a3e8c;
+        }
+
+        #map {
+            width: 100%;
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .eta-info {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a3e8c;
+        }
+    </style>
 </head>
 <body>
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="profile">
-      <img src="doctor.png" alt="Doctor Photo">
-      <h3>Dr. Zacharia</h3>
-      <p>Emergency Doctor</p>
+
+    <div class="sidebar">
+        <a href="index.html">Dashboard</a>
+        <a href="ambulance-tracking.html">Ambulance Tracking</a>
+        <a href="patient-prearrival.html">Patient Pre-Arrival</a>
+        <a href="case-prioritization.html">Case Prioritization</a>
+        <a href="hospital-resources.html">Hospital Resources</a>
+        
+        <li><a href="login.html" onclick="handleLogout()">🔒 Logout</a></li>
     </div>
-    <ul class="menu">
-      <li><a href="index.html">🏠 Dashboard</a></li>
-      <li><a href="ambulance.html" class="active">🚑 Ambulance Tracking</a></li>
-      <li><a href="patient.html">📋 Patient Pre-Arrival</a></li>
-      <li><a href="case.html">⚠️ Case Prioritization</a></li>
-      <li><a href="resources.html">🏥 Hospital Resources</a></li>
-      <li><a href="analytics.html">📊 Analytics</a></li>
-      <li><a href="reports.html">📝 Reports</a></li>
-      <li><a href="login.html" onclick="handleLogout()">🔒 Logout</a></li>
-    </ul>
-  </aside>
 
-  <!-- Main Content -->
-  <div class="main">
-    <header class="topbar">
-      <h2>Ambulance Tracking</h2>
-      <span id="datetime"></span>
-    </header>
+    <div class="main">
+        <h1>Real-Time Ambulance Tracking</h1>
+        <div id="map"></div>
+        <div class="eta-info" id="eta">Estimated Time to Hospital: -- mins</div>
+    </div>
 
-    <section class="content">
-      <h3>Current Ambulances En Route</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Ambulance ID</th>
-            <th>Location</th>
-            <th>Status</th>
-            <th>ETA</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>AMB001</td>
-            <td>Zone A</td>
-            <td>En Route</td>
-            <td>5 mins</td>
-          </tr>
-          <tr>
-            <td>AMB002</td>
-            <td>Zone B</td>
-            <td>Delayed</td>
-            <td>10 mins</td>
-          </tr>
-          <tr>
-            <td>AMB003</td>
-            <td>Zone C</td>
-            <td>En Route</td>
-            <td>7 mins</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </div>
-
-  <script src="dashboard.js"></script>
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="js/ambulance-tracking.js"></script>
 </body>
 </html>
