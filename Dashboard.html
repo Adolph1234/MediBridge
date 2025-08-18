@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediBridge - Doctor Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="doctor.png" alt="Doctor Photo">
+      <h3>Dr. Zacharia</h3>
+      <p>Emergency Doctor</p>
+    </div>
+    <ul class="menu">
+      <li><a href="#">🏠 Dashboard</a></li>
+      <li><a href="#">🚑 Ambulance Tracking</a></li>
+      <li><a href="#">📋 Patient Pre-Arrival</a></li>
+      <li><a href="#">⚠️ Case Prioritization</a></li>
+      <li><a href="#">🏥 Hospital Resources</a></li>
+      <li><a href="#">📊 Analytics</a></li>
+      <li><a href="#">📝 Reports</a></li>
+      <li><a href="#">🔒 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Dashboard -->
+  <div class="main">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <h2>Welcome to MediBridge</h2>
+      <span id="datetime"></span>
+    </header>
+
+    <!-- Content Overview -->
+    <section class="cards">
+      <div class="card">
+        <h3>🚑 Ambulances En Route</h3>
+        <p><span class="highlight">3</span> ambulances currently incoming</p>
+      </div>
+      <div class="card critical">
+        <h3>⚠️ Critical Cases</h3>
+        <p><span class="highlight">2</span> patients in red priority</p>
+      </div>
+      <div class="card">
+        <h3>🏥 ICU Availability</h3>
+        <p><span class="highlight">5</span> ICU beds left</p>
+      </div>
+      <div class="card">
+        <h3>📊 Last 24h Summary</h3>
+        <p><span class="highlight">12</span> emergency cases handled</p>
+      </div>
+    </section>
+  </div>
+  <button onclick="handleLogout()">Logout</button>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
