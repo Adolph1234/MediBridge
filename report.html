@@ -1,0 +1,259 @@
+<!DOCTYPE html>>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBridge Reports</title>
+    <!-- ✅ Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #1e88e5;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+/* 🔹 FILTER BAR */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      background: #fff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .filter-group {
+      position: relative;
+      flex: 1 1 200px;
+      min-width: 180px;
+      display: flex;
+    }
+    .filter-group i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #777;
+    }
+    .filters select, 
+    .filters input[type="date"],
+    .filters input[type="text"] {
+      width: 100%;
+      padding: 10px 15px 10px 35px; /* space for icon */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .filters select:focus,
+    .filters input:focus {
+      border-color: #1e88e5;
+      box-shadow: 0 0 5px rgba(30,136,229,0.5);
+    }
+
+
+       /* 🔹 BUTTONS */
+    .filter-btn, .reset-btn {
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      flex: 1 1 120px;
+      min-width: 120px;
+    }
+    .filter-btn {
+      background: #1e88e5;
+      color: #fff;
+    }
+    .filter-btn:hover {
+      background: #1565c0;
+    }
+    .reset-btn {
+      background: #f44336;
+      color: #fff;
+    }
+    .reset-btn:hover {
+      background: #c62828;
+    }
+
+        @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filters select,
+            .filters input,
+            .filter-btn {
+                width: 100%;
+            }
+        }
+
+        .kpi {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 10px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .report-table {
+            margin: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #1e88e5;
+            color: white;
+        }
+
+        .actions {
+            text-align: right;
+            margin: 20px;
+        }
+
+        button {
+            background: #1e88e5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1565c0;
+        }
+    </style>
+</head>
+
+<body>
+    <header> MediBridge Report Dashboard</header>
+
+  <!-- 🔹 FILTER SECTION -->
+  <div class="filters">
+    <div class="filter-group">
+      <i class="fa-solid fa-calendar-day"></i>
+      <input type="date" placeholder="From Date">
+    </div>
+
+    <div class="filter-group">
+      <i class="fa-solid fa-calendar-check"></i>
+      <input type="date" placeholder="To Date">
+    </div>
+     <div class="filter-group">
+      <i class="fa-solid fa-hospital"></i>
+        <select>
+            <option>All Hosptials</option>
+            <option>Hosptials A</option>
+            <option>Hosptials B</option>
+        </select>
+        </div>
+         <div class="filter-group">
+      <i class="fa-solid fa-truck-medical"></i>
+
+        <select>
+            <option>All Types</option>
+            <option>Emergency</option>
+            <option>Transfer</option>
+        </select>
+    </div>
+        <div class="filter-group">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search by patient or ID">
+    </div>
+
+    <button class="filter-btn"><i class="fa-solid fa-filter"></i> Apply Filter</button>
+    <button class="reset-btn"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+  </div>
+    <div class="kpi">
+        <div class="card">Total Requests <h2>120</h2>
+        </div>
+        <div class="card">Completed <h2>95</h2>
+        </div>
+        <div class="card">Avg Response Time <h2>12 min</h2>
+        </div>
+    </div>
+
+    <div class="report-table">
+        <h3>Detailed Report</h3>
+        <table>
+            <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Case Type</th>
+                <th>Request Time</th>
+                <th>Response Time</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>John Doe</td>
+                <td>Emergency</td>
+                <td>10:00 AM</td>
+                <td>10:12 AM</td>
+                <td>Completed</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Jane Smith</td>
+                <td>Transfer</td>
+                <td>11:15 AM</td>
+                <td>11:28 AM</td>
+                <td>Pending</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="actions">
+        <button>Export PDF</button>
+        <button>Export Excel</button>
+        <button>Print</button>
+    </div>
+
+
+
+</body>
+
+</html>
