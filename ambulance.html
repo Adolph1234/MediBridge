@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediBridge - Ambulance Tracking</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="doctor.png" alt="Doctor Photo">
+      <h3>Dr. Zacharia</h3>
+      <p>Emergency Doctor</p>
+    </div>
+    <ul class="menu">
+      <li><a href="index.html">🏠 Dashboard</a></li>
+      <li><a href="ambulance.html" class="active">🚑 Ambulance Tracking</a></li>
+      <li><a href="patient.html">📋 Patient Pre-Arrival</a></li>
+      <li><a href="case.html">⚠️ Case Prioritization</a></li>
+      <li><a href="resources.html">🏥 Hospital Resources</a></li>
+      <li><a href="analytics.html">📊 Analytics</a></li>
+      <li><a href="reports.html">📝 Reports</a></li>
+      <li><a href="#" onclick="handleLogout()">🔒 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="topbar">
+      <h2>Ambulance Tracking</h2>
+      <span id="datetime"></span>
+    </header>
+
+    <section class="content">
+      <h3>Current Ambulances En Route</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Ambulance ID</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>ETA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AMB001</td>
+            <td>Zone A</td>
+            <td>En Route</td>
+            <td>5 mins</td>
+          </tr>
+          <tr>
+            <td>AMB002</td>
+            <td>Zone B</td>
+            <td>Delayed</td>
+            <td>10 mins</td>
+          </tr>
+          <tr>
+            <td>AMB003</td>
+            <td>Zone C</td>
+            <td>En Route</td>
+            <td>7 mins</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
