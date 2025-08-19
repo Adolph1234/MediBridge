@@ -2,6 +2,43 @@
 <html>
 
 <head>
+<<<<<<< Updated upstream
+=======
+<!-- HEAD -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediBridge Reports</title>
+  <!--  Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- ✅ jsPDF (for PDF Export) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- ✅ AutoTable plugin for jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- ✅ SheetJS (for Excel Export) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1e88e5;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +70,10 @@
       font-weight: bold;
     }
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> 184607c3a3ade9a24772c133de22a1c7258c8814
+>>>>>>> Stashed changes
     /* 🔹 FILTER BAR */
     .filters {
       display: flex;
@@ -66,6 +107,13 @@
     .filters input[type="text"] {
       width: 100%;
       padding: 10px 15px 10px 35px;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+      /* space for icon */
+=======
+>>>>>>> 184607c3a3ade9a24772c133de22a1c7258c8814
+>>>>>>> Stashed changes
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 14px;
@@ -79,6 +127,13 @@
       box-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
     }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 184607c3a3ade9a24772c133de22a1c7258c8814
+>>>>>>> Stashed changes
     /* 🔹 BUTTONS */
     .filter-btn,
     .reset-btn {
@@ -181,11 +236,94 @@
     button:hover {
       background: #1565c0;
     }
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+
+    /* export */
+    .report-table {
+      margin: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #1e88e5;
+      color: white;
+    }
+
+    .actions {
+      text-align: right;
+      margin: 20px;
+    }
+
+    button {
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 5px;
+      transition: background 0.3s;
+    }
+
+    .pdf-btn {
+      background: #e53935;
+      color: white;
+    }
+
+    .pdf-btn:hover {
+      background: #b71c1c;
+    }
+
+    .excel-btn {
+      background: #43a047;
+      color: white;
+    }
+
+    .excel-btn:hover {
+      background: #2e7d32;
+    }
+
+    .print-btn {
+      background: #1e88e5;
+      color: white;
+    }
+
+    .print-btn:hover {
+      background: #1565c0;
+    }
+=======
+>>>>>>> 184607c3a3ade9a24772c133de22a1c7258c8814
+>>>>>>> Stashed changes
   </style>
 </head>
 
 <body>
+<<<<<<< Updated upstream
   <header>MediBridge Report Dashboard</header>
+=======
+<<<<<<< HEAD
+  <header> MediBridge Report Dashboard</header>
+=======
+  <header>MediBridge Report Dashboard</header>
+>>>>>>> 184607c3a3ade9a24772c133de22a1c7258c8814
+>>>>>>> Stashed changes
 
   <!-- 🔹 FILTER SECTION -->
   <div class="filters">
@@ -198,6 +336,7 @@
       <i class="fa-solid fa-calendar-check"></i>
       <input type="date" placeholder="To Date">
     </div>
+<<<<<<< Updated upstream
 
     <div class="filter-group">
       <i class="fa-solid fa-hospital"></i>
@@ -207,6 +346,36 @@
         <option>Hospital B</option>
       </select>
     </div>
+=======
+<<<<<<< HEAD
+    <div class="filter-group">
+      <i class="fa-solid fa-hospital"></i>
+      <select>
+        <option>All Hosptials</option>
+        <option>Hosptials A</option>
+        <option>Hosptials B</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <i class="fa-solid fa-truck-medical"></i>
+
+      <select>
+        <option>All Types</option>
+        <option>Emergency</option>
+        <option>Transfer</option>
+      </select>
+    </div>
+=======
+
+    <div class="filter-group">
+      <i class="fa-solid fa-hospital"></i>
+      <select>
+        <option>All Hospitals</option>
+        <option>Hospital A</option>
+        <option>Hospital B</option>
+      </select>
+    </div>
+>>>>>>> Stashed changes
 
     <div class="filter-group">
       <i class="fa-solid fa-truck-medical"></i>
@@ -217,6 +386,10 @@
       </select>
     </div>
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> 184607c3a3ade9a24772c133de22a1c7258c8814
+>>>>>>> Stashed changes
     <div class="filter-group">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" placeholder="Search by patient or ID">
@@ -225,6 +398,7 @@
     <button class="filter-btn"><i class="fa-solid fa-filter"></i> Apply Filter</button>
     <button class="reset-btn"><i class="fa-solid fa-rotate-left"></i> Reset</button>
   </div>
+<<<<<<< Updated upstream
 
   <div class="kpi">
     <div class="card">Total Requests <h2>120</h2></div>
@@ -262,6 +436,139 @@
     </table>
   </div>
 
+=======
+<<<<<<< HEAD
+  <div class="kpi">
+    <div class="card">Total Requests <h2>120</h2>
+    </div>
+    <div class="card">Completed <h2>95</h2>
+    </div>
+    <div class="card">Avg Response Time <h2>12 min</h2>
+    </div>
+  </div>
+
+  <!-- Report Table -->
+  <div class="report-table" id="reportContent">
+    <h3>Detailed Report</h3>
+    <table id="reportTable">
+      <tr>
+        <th>Patient ID</th>
+        <th>Name</th>
+        <th>Case Type</th>
+        <th>Request Time</th>
+        <th>Response Time</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>John Doe</td>
+        <td>Emergency</td>
+        <td>10:00 AM</td>
+        <td>10:12 AM</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Jane Smith</td>
+        <td>Transfer</td>
+        <td>11:15 AM</td>
+        <td>11:28 AM</td>
+        <td>Pending</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Export Buttons -->
+  <div class="actions">
+    <button class="pdf-btn" onclick="exportPDF()"><i class="fa-solid fa-file-pdf"></i> Export PDF</button>
+    <button class="excel-btn" onclick="exportExcel()"><i class="fa-solid fa-file-excel"></i> Export Excel</button>
+    <button class="print-btn" onclick="printReport()"><i class="fa-solid fa-print"></i> Print</button>
+  </div>
+
+  <script>
+    // ✅ Print
+    function printReport() {
+      window.print();
+    }
+
+    // ✅ Export PDF (no logo for now, just table)
+    function exportPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      // Title
+      doc.setFontSize(16);
+      doc.setTextColor(30, 136, 229);
+      doc.text("MediBridge Report", 14, 15);
+
+      // Timestamp
+      doc.setFontSize(10);
+      doc.setTextColor(100);
+      doc.text("Generated on: " + new Date().toLocaleString(), 14, 22);
+
+      // Table
+      doc.autoTable({
+        html: "#reportTable",
+        startY: 30,
+        styles: { fontSize: 10, halign: "center" },
+        headStyles: { fillColor: [30, 136, 229], textColor: 255 }
+      });
+
+      doc.save("MediBridge_Report.pdf");
+    }
+
+    // ✅ Export to Excel
+    function exportExcel() {
+      let table = document.getElementById("reportTable");
+      let wb = XLSX.utils.table_to_book(table, { sheet: "Report" });
+      XLSX.writeFile(wb, "MediBridge_Report.xlsx");
+    }
+  </script>
+  <!-- <div class="actions">
+        <button>Export PDF</button>
+        <button>Export Excel</button>
+        <button>Print</button>
+    </div> -->
+=======
+
+  <div class="kpi">
+    <div class="card">Total Requests <h2>120</h2></div>
+    <div class="card">Completed <h2>95</h2></div>
+    <div class="card">Avg Response Time <h2>12 min</h2></div>
+  </div>
+>>>>>>> 184607c3a3ade9a24772c133de22a1c7258c8814
+
+  <div class="report-table">
+    <h3>Detailed Report</h3>
+    <table>
+      <tr>
+        <th>Patient ID</th>
+        <th>Name</th>
+        <th>Case Type</th>
+        <th>Request Time</th>
+        <th>Response Time</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>John Doe</td>
+        <td>Emergency</td>
+        <td>10:00 AM</td>
+        <td>10:12 AM</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Jane Smith</td>
+        <td>Transfer</td>
+        <td>11:15 AM</td>
+        <td>11:28 AM</td>
+        <td>Pending</td>
+      </tr>
+    </table>
+  </div>
+
+>>>>>>> Stashed changes
   <div class="actions">
     <button>Export PDF</button>
     <button>Export Excel</button>
